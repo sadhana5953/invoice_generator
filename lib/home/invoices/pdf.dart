@@ -34,7 +34,7 @@ Future<Uint8List> generatepdf() async {
                 mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
                 children: [
                   pw.Text('${customer}\n${address}',
-                      style: pw.TextStyle(fontSize: 27)),
+                      style: pw.TextStyle(fontSize: 25)),
                   pw.Container(
                       height: 120,
                       width: 180,

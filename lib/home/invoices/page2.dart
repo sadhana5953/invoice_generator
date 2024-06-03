@@ -28,7 +28,7 @@ class _invoicePage2State extends State<invoicePage2> {
         title: Text(
           '${title}',
           style: TextStyle(
-              color: Colors.white, fontSize: 22),
+              color: Colors.white,fontWeight: FontWeight.w500, fontSize: 22),
         ),
         backgroundColor: Colors.blueAccent,
       ),
