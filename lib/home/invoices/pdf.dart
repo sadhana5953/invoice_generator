@@ -36,7 +36,12 @@ Future<Uint8List> generatepdf() async {
                   pw.Text('${customer}\n${address}',
                       style: pw.TextStyle(fontSize: 25)),
                   pw.Container(
-                      height: 120, width: 180, decoration: pw.BoxDecoration(color: PdfColors.purpleAccent,image: pw.DecorationImage(image:  image1,fit: pw.BoxFit.cover))),
+                      height: 120,
+                      width: 180,
+                      decoration: pw.BoxDecoration(
+                          color: PdfColors.purpleAccent,
+                          image: pw.DecorationImage(
+                              image: image1, fit: pw.BoxFit.cover))),
                 ]),
             pw.SizedBox(height: 50),
             pw.Table(

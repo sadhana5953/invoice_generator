@@ -23,51 +23,60 @@ class _invoicePage1State extends State<invoicePage1> {
         children: List.generate(
             itemList.length,
             (index) => GestureDetector(
-              onTap: (){
-                title=listOfInvoice[index].Category.toString();
-                customer=listOfInvoice[index].Name.toString();
-                address=listOfInvoice[index].Add.toString();
-                if(index==0)
-                  {
-                    for(int i=0;i<invoice1List.length;i++)
-                    {
-                      items.add(invoice1List[i].name.toString());
-                      price.add(invoice1List[i].price.toString());
-                      total=total+invoice1List[i].price!;
+                  onTap: () {
+                    title = listOfInvoice[index].Category.toString();
+                    customer = listOfInvoice[index].Name.toString();
+                    address = listOfInvoice[index].Add.toString();
+                    if (index == 0) {
+                      for (int i = 0; i < invoice1List.length; i++) {
+                        items.add(invoice1List[i].name.toString());
+                        price.add(invoice1List[i].price.toString());
+                        total = total + invoice1List[i].price!;
+                      }
+                    } else if (index == 1) {
+                      for (int i = 0; i < invoice2List.length; i++) {
+                        items.add(invoice2List[i].name.toString());
+                        price.add(invoice2List[i].price.toString());
+                        total = total + invoice2List[i].price!;
+                      }
+                    } else if (index == 2) {
+                      for (int i = 0; i < invoice3List.length; i++) {
+                        items.add(invoice3List[i].name.toString());
+                        price.add(invoice3List[i].price.toString());
+                        total = total + invoice3List[i].price!;
+                      }
                     }
-                  }else if(index==1)
-                {
-                  for(int i=0;i<invoice2List.length;i++)
-                  {
-                    items.add(invoice2List[i].name.toString());
-                    price.add(invoice2List[i].price.toString());
-                    total=total+invoice2List[i].price!;
-                  }
-                }else if(index==2)
-                {
-                  for(int i=0;i<invoice3List.length;i++)
-                  {
-                    items.add(invoice3List[i].name.toString());
-                    price.add(invoice3List[i].price.toString());
-                    total=total+invoice3List[i].price!;
-                  }
-                }
-                Navigator.of(context).pushNamed('/page');
-              },
-              child: ListTile(
-                    title: Text('${listOfInvoice[index].Category.toString()}',style: TextStyle(fontWeight: FontWeight.w500),),
-                    subtitle: Text('${listOfInvoice[index].Name.toString()}',style: TextStyle(color: Colors.grey,fontWeight: FontWeight.w500,fontSize: 15),),
-                trailing: Text('\$${check[index]}',style: TextStyle(color: Colors.grey.shade600,fontWeight: FontWeight.w500,fontSize: 14),),
+                    Navigator.of(context).pushNamed('/page');
+                  },
+                  child: ListTile(
+                    title: Text(
+                      '${listOfInvoice[index].Category.toString()}',
+                      style: TextStyle(fontWeight: FontWeight.w500),
+                    ),
+                    subtitle: Text(
+                      '${listOfInvoice[index].Name.toString()}',
+                      style: TextStyle(
+                          color: Colors.grey,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 15),
+                    ),
+                    trailing: Text(
+                      '\$${check[index]}',
+                      style: TextStyle(
+                          color: Colors.grey.shade600,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 14),
+                    ),
                   ),
-            )),
+                )),
       ),
     );
   }
 }
 
-String title='';
-String customer='';
-String address='';
+String title = '';
+String customer = '';
+String address = '';
 
 class customerModel {
   String? Name;
@@ -151,7 +160,7 @@ class InvoiceModel {
   InvoiceModel({this.name, this.price, this.category});
 }
 
-List items=[];
-List price=[];
-double total=0;
-List check = [4180.95,193.55,561.05];
+List items = [];
+List price = [];
+double total = 0;
+List check = [4180.95, 193.55, 561.05];
