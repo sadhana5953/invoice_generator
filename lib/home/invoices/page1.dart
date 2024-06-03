@@ -16,7 +16,7 @@ class _invoicePage1State extends State<invoicePage1> {
         centerTitle: true,
         title: Text(
           'Invoices',
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
+          style: TextStyle(color: Colors.white,),
         ),
       ),
       body: Column(
